@@ -12,7 +12,7 @@ Install the necessary packages using the following command:
 
 # 2. Project Structure
 Ensure the project root is organized as follows:
-
+```
 ├── data_4_split/               # Raw UNSW-NB15 test CSV folder
 │    └── UNSW-NB15_4.csv
 ├── build_scenarios_final.py    # Script for generating attack scenarios
@@ -21,7 +21,7 @@ Ensure the project root is organized as follows:
 ├── gru_dual_threshold_model.pth # Pre-trained GRU model
 ├── preproc_params.json         # Preprocessing parameters (must be in the same folder as the model)
 └── README.md                   # Project documentation
-
+```
 # 3. Execution Steps for Reproduction
 To reproduce the results, execute the scripts in the following order:
 
