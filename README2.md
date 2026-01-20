@@ -59,16 +59,16 @@ test.py automatically performs the following tasks:
 
 # 4. Output Summary
 Generated Files (in artifacts_parquet/)
+```
+test_decisions.csv: Complete logs of the engine's decisions.
 
-	test_decisions.csv: Complete logs of the engine's decisions.
+scenario_y.parquet: Ground truth labels for the selected scenarios.
 
-	scenario_y.parquet: Ground truth labels for the selected scenarios.
+Visualizations: Confusion Matrix, Attack Scenario Graphs, and IP Status Pie Charts.
 
-	Visualizations: Confusion Matrix, Attack Scenario Graphs, and IP Status Pie Charts.
-
-	Deception Files (in fake_files/)
-	Automatically generated directories for each scenario (scenario_ddos, scenario_slow_scan, etc.) containing decoy files to 	mislead attackers.
-
+Deception Files (in fake_files/)
+Automatically generated directories for each scenario (scenario_ddos, scenario_slow_scan, etc.) containing decoy files to 	mislead attackers.
+```
 # 5. Key Features
 
 Dual-Threshold Mechanism: Utilizes GRU model outputs to implement a sophisticated detection logic beyond simple binary classification.
