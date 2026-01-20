@@ -2,7 +2,7 @@ AI-Based Security Policy Engine & Attack Scenario Testing
 
 This project implements an AI-driven security policy engine designed to detect and respond to network attack scenarios (DDoS, Slow Scan, etc.) using the UNSW-NB15 dataset and a GRU-based dual-threshold model.
 
-1. Environment & Prerequisites
+# 1. Environment & Prerequisites
 The code has been tested and verified in Python 3.10.
 
 Required Libraries
@@ -10,7 +10,7 @@ Install the necessary packages using the following command:
 
 	pip install numpy pandas torch scikit-learn matplotlib seaborn pyarrow tqdm
 
-2. Project Structure
+# 2. Project Structure
 Ensure the project root is organized as follows:
 
 ├── data_4_split/               # Raw UNSW-NB15 test CSV folder
@@ -22,16 +22,16 @@ Ensure the project root is organized as follows:
 ├── preproc_params.json         # Preprocessing parameters (must be in the same folder as the model)
 └── README.md                   # Project documentation
 
-3. Execution Steps for Reproduction
+# 3. Execution Steps for Reproduction
 To reproduce the results, execute the scripts in the following order:
 
-[Step 1] Generate Scenario Data
+## [Step 1] Generate Scenario Data
 
 	python build_scenarios_final.py
 
 Result: Preprocesses raw data and generates attack scenarios (DDoS, Slow Scan) in Parquet format within the artifacts_parquet/ directory.
 
-[Step 2] Calculate Feature Importance
+## [Step 2] Calculate Feature Importance
 
 	python feature_importance_auc.py
 
@@ -43,7 +43,7 @@ Outputs:
 
 	artifacts_parquet/core_features.json: Selected core features required for test.py.
 
-[Step 3] Run Security Policy Engine & Visualization
+## [Step 3] Run Security Policy Engine & Visualization
 
 	python test.py
 
@@ -57,7 +57,7 @@ test.py automatically performs the following tasks:
 
  - Generates and provides Deception Files (honeyfiles) for suspicious/blocked activities.
 
-4. Output Summary
+# 4. Output Summary
 Generated Files (in artifacts_parquet/)
 
 	test_decisions.csv: Complete logs of the engine's decisions.
@@ -69,7 +69,7 @@ Generated Files (in artifacts_parquet/)
 	Deception Files (in fake_files/)
 	Automatically generated directories for each scenario (scenario_ddos, scenario_slow_scan, etc.) containing decoy files to 	mislead attackers.
 
-5. Key Features
+# 5. Key Features
 
 Dual-Threshold Mechanism: Utilizes GRU model outputs to implement a sophisticated detection logic beyond simple binary classification.
 
